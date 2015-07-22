@@ -1,14 +1,13 @@
 {
-    "name": "bootstrap"
+    "name": "bootstrap2-umd"
   , "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
   , "version": "2.3.2"
-  , "keywords": ["bootstrap", "css"]
-  , "homepage": "http://twbs.github.com/bootstrap/"
+  , "keywords": ["bootstrap", "css", "browserify"]
   , "author": "Twitter Inc."
   , "scripts": { "test": "make test" }
   , "repository": {
       "type": "git"
-    , "url": "https://github.com/twbs/bootstrap.git"
+    , "url": "https://github.com/jasonmadigan/bootstrap2-umd.git"
   }
   , "licenses": [
     {

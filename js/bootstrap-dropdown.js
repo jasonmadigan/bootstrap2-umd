@@ -18,7 +18,18 @@
  * ============================================================ */
 
 
-!function ($) {
+(function(factory) {
+  if (typeof exports === 'object') {
+    // Node/CommonJS
+    factory(require('jquery'));
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module. 
+    define(['jquery'], factory);
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function($) {
 
   "use strict"; // jshint ;_;
 
@@ -166,4 +177,4 @@
     .on('click.dropdown.data-api'  , toggle, Dropdown.prototype.toggle)
     .on('keydown.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
 
-}(window.jQuery);
+}));

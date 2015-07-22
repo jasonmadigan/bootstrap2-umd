@@ -18,7 +18,18 @@
  * ========================================================== */
 
 
-!function ($) {
+(function(factory) {
+  if (typeof exports === 'object') {
+    // Node/CommonJS
+    factory(require('jquery'));
+  } else if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module. 
+    define(['jquery'], factory);
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function($) {
 
   "use strict"; // jshint ;_;
 
@@ -204,4 +215,4 @@
     e.preventDefault()
   })
 
-}(window.jQuery);
+}));
